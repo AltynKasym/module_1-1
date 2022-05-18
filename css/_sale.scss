@@ -1,0 +1,24 @@
+.sale {
+  background: url("../img/bg.png") no-repeat center;
+  height: 436px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    text-align: center;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 60px;
+  }
+
+  &__paragraph {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+  }
+}

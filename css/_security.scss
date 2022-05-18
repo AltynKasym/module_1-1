@@ -1,0 +1,45 @@
+.security {
+  display: flex;
+  position: relative;
+  top: -207px;
+  margin-bottom: -230px;
+  background-color: #f2f2f2;
+
+  &-title {
+    text-align: left;
+    color: #222222;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__media {
+    margin: 100px 100px 0 100px;
+
+    &-image {
+      width: 376px;
+    }
+  }
+
+  &__info {
+    margin: 177px 100px 155px 94px;
+
+    &-title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 36px;
+      color: #222222;
+      margin-bottom: 17px;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #222222;
+      margin-bottom: 20px;
+    }
+  }
+}

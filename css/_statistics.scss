@@ -1,0 +1,32 @@
+.statistics {
+  padding: 80px 0 97px;
+
+  background-color: #ff5437;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    width: 378px;
+    text-align: center;
+
+    &-number {
+      font-weight: 400;
+      font-size: 95px;
+      line-height: 96px;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+}

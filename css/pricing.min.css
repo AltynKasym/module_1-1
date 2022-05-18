@@ -1,0 +1,97 @@
+.pricing {
+  position: relative;
+  top: -208px;
+  padding: 100px 0 84px;
+  background-color: #222222;
+  margin-bottom: -208px;
+}
+.pricing__title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  color: #ffffff;
+  width: 495px;
+  text-align: center;
+  margin: 0 auto 45px;
+}
+.pricing__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pricing__item {
+  position: relative;
+  background-color: #fff;
+  width: 379px;
+  height: 490px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.pricing__item::before {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  -webkit-transform: translate(-51%);
+      -ms-transform: translate(-51%);
+          transform: translate(-51%);
+  display: block;
+  z-index: 1;
+}
+.pricing__item:nth-child(1)::before {
+  content: url("../img/futures/calendar.png");
+}
+.pricing__item:nth-child(2)::before {
+  content: url("../img/futures/lists.png");
+}
+.pricing__item:nth-child(3)::before {
+  content: url("../img/futures/varied-type.png");
+}
+.pricing__item:nth-child(4)::before {
+  content: url("../img/futures/split-screen.png");
+}
+.pricing__item:nth-child(5)::before {
+  content: url("../img/futures/uploads.png");
+}
+.pricing__item:nth-child(6)::before {
+  content: url("../img/futures/focus-mode.png");
+}
+.pricing__item-image {
+  width: 227px;
+  padding-top: 39.53px;
+}
+.pricing__item-info {
+  position: relative;
+  top: -202px;
+  background: #f2f2f2;
+  padding: 48px 47px 40px;
+  border-radius: 0 0 20px 20px;
+}
+.pricing__item-info:nth-child(1):before {
+  content: url("../img/futures/calendar.png");
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  -webkit-transform: translate(-51%);
+      -ms-transform: translate(-51%);
+          transform: translate(-51%);
+  display: block;
+}
+.pricing__item-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0278ed;
+  margin-bottom: 11px;
+}
+.pricing__item-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #222222;
+}
