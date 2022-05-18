@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 1167px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    padding: 25px 0 25px 15px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-list {
+      display: flex;
+      margin-right: 55px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #666666;
+    }
+
+    &-item {
+      padding-left: 42px;
+    }
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-right: 10px;
+    padding: 10px 31px 12px;
+    background-color: #222222;
+    border-radius: 4px;
+  }
+}
+
+.sale {
+  background: url("../img/bg.png") no-repeat center;
+  height: 100%;
+
+  &__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    text-align: center;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 60px;
+  }
+
+  &__paragraph {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+  }
+}
+
+.future {
+  display: flex;
+
+  &__inner {
+    display: flex;
+    // justify-content: start;
+    // flex-direction: column;
+  }
+
+  &__info {
+    margin-top: 138px;
+    margin: 138px 214px 155px 78px;
+
+    &-logo {
+      width: 192px;
+      margin-bottom: 11px;
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 54px;
+      line-height: 60px;
+      color: #222222;
+      margin-bottom: 17px;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #222222;
+      margin-bottom: 20px;
+    }
+
+    &-buttons {
+      display: flex;
+    }
+
+    &-button {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+      padding: 10px 25px 12px;
+      background-color: #222222;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+  }
+
+  &__media {
+    margin-top: 93px;
+    margin-right: 100px;
+
+    &-image {
+      width: 376px;
+    }
+  }
+}
