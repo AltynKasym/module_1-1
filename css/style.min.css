@@ -468,20 +468,28 @@ a {
 }
 
 .pricing {
-  position: relative;
-  top: -208px;
-  padding: 100px 0 84px;
-  background-color: #222222;
-  margin-bottom: -208px;
+  padding: 115px 0 84px;
+  background-color: #fff;
 }
 .pricing__title {
+  color: #222222;
+}
+.pricing__subtitle {
   font-weight: 400;
   font-size: 32px;
   line-height: 36px;
-  color: #ffffff;
-  width: 495px;
   text-align: center;
-  margin: 0 auto 45px;
+  color: #222222;
+  margin: 0 auto 15px;
+}
+.pricing__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #666666;
+  width: 570px;
+  margin: 0 auto 41px;
 }
 .pricing__list {
   display: -webkit-box;
@@ -494,73 +502,194 @@ a {
           justify-content: space-between;
 }
 .pricing__item {
-  position: relative;
-  background-color: #fff;
   width: 379px;
-  height: 490px;
-  text-align: center;
+  height: 338px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f2f2f2;
+  padding: 48px 0 40px;
   border-radius: 20px;
   margin-bottom: 16px;
 }
-.pricing__item::before {
-  position: absolute;
-  top: 260px;
-  left: 50%;
-  -webkit-transform: translate(-51%);
-      -ms-transform: translate(-51%);
-          transform: translate(-51%);
-  display: block;
-  z-index: 1;
+.pricing__item:nth-child(1) {
+  color: #0278ed;
 }
-.pricing__item:nth-child(1)::before {
-  content: url("../img/futures/calendar.png");
+.pricing__item:nth-child(1) button {
+  background: #0278ed;
 }
-.pricing__item:nth-child(2)::before {
-  content: url("../img/futures/lists.png");
+.pricing__item:nth-child(2) {
+  color: #ff5437;
 }
-.pricing__item:nth-child(3)::before {
-  content: url("../img/futures/varied-type.png");
+.pricing__item:nth-child(2) button {
+  background: #ff5437;
 }
-.pricing__item:nth-child(4)::before {
-  content: url("../img/futures/split-screen.png");
+.pricing__item:nth-child(3) {
+  color: #ff9209;
 }
-.pricing__item:nth-child(5)::before {
-  content: url("../img/futures/uploads.png");
-}
-.pricing__item:nth-child(6)::before {
-  content: url("../img/futures/focus-mode.png");
-}
-.pricing__item-image {
-  width: 227px;
-  padding-top: 39.53px;
-}
-.pricing__item-info {
-  position: relative;
-  top: -202px;
-  background: #f2f2f2;
-  padding: 48px 47px 40px;
-  border-radius: 0 0 20px 20px;
-}
-.pricing__item-info:nth-child(1):before {
-  content: url("../img/futures/calendar.png");
-  position: absolute;
-  top: -34px;
-  left: 50%;
-  -webkit-transform: translate(-51%);
-      -ms-transform: translate(-51%);
-          transform: translate(-51%);
-  display: block;
+.pricing__item:nth-child(3) button {
+  background: #ff9209;
 }
 .pricing__item-title {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
-  color: #0278ed;
-  margin-bottom: 11px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
 }
-.pricing__item-text {
+.pricing__item-price {
   font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 108px;
+  line-height: 124px;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: -12px 0 25px;
+}
+.pricing__item-period {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: #222222;
+  margin-bottom: 19px;
+}
+.pricing__item-button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 129px;
+  height: 40px;
+  background: inherit;
+  border: 0;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.testimonials {
+  padding: 100px 0 84px;
+  background: #f2f2f2;
+}
+.testimonials__title {
+  color: #222222;
+}
+.testimonials__subtitle {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: #222222;
+  margin: -10px auto 13px;
+}
+.testimonials__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #666666;
+  width: 570px;
+  margin: 0 auto 43px;
+}
+.testimonials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.testimonials__item {
+  width: 379px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  padding: 30px 37px 4px 30px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.testimonials__item-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+.testimonials__item-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: -1px;
+}
+.testimonials__item-position {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+.testimonials__item-button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 129px;
+  height: 40px;
+  background: inherit;
+  border: 0;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.download {
+  padding: 100px 0 84px;
+  background-color: #fff;
+}
+.download__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.download__title {
+  color: #222222;
+}
+.download__subtitle {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: #222222;
+  margin: 0 auto 15px;
+}
+.download__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #666666;
+  width: 600px;
+  margin: 0 auto 25px;
 }
