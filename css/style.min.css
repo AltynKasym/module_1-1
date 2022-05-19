@@ -280,7 +280,8 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 5px 195px 0 215px;
+  margin: 0 auto;
+  padding: 5px 194px 0 215px;
 }
 .sale__timer-item {
   display: -webkit-box;
@@ -300,13 +301,14 @@ a {
   line-height: 150px;
   letter-spacing: 1.1px;
   text-transform: uppercase;
-  margin-bottom: -15px;
+  margin-bottom: -13px;
 }
 .sale__timer-text {
   font-size: 24px;
   line-height: 36px;
   text-align: center;
   letter-spacing: 1.5px;
+  margin-left: 5%;
 }
 
 .statistics {
