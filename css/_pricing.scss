@@ -34,11 +34,10 @@
 
   &__item {
     width: 379px;
-    height: 338px;
     display: flex;
     flex-direction: column;
     background: #f2f2f2;
-    padding: 48px 0 40px;
+    padding: 48px 0 50px;
     border-radius: 20px;
     margin-bottom: 16px;
 
@@ -97,7 +96,7 @@
       text-transform: uppercase;
       color: #ffffff;
       width: 129px;
-      height: 40px;
+      padding: 11px 0;
       background: inherit;
       border: 0;
       border-radius: 4px;

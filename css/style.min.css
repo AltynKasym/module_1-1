@@ -135,7 +135,7 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   width: 148px;
-  height: 40px;
+  padding: 9px 0;
   background-color: #222222;
   border-radius: 4px;
   margin: 0 5px;
@@ -256,24 +256,57 @@ a {
 .sale {
   background: url("../img/bg.png") no-repeat center;
   height: 436px;
+  color: #ffffff;
+  font-weight: 700;
 }
 .sale__title {
-  font-weight: 700;
   font-size: 50px;
   line-height: 75px;
   text-align: center;
   letter-spacing: 1.1px;
   text-transform: uppercase;
-  color: #ffffff;
   padding-top: 60px;
 }
 .sale__paragraph {
-  font-weight: 700;
   font-size: 30px;
   line-height: 45px;
   text-align: center;
   letter-spacing: 1.5px;
   color: #ffffff;
+}
+.sale__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px 195px 0 215px;
+}
+.sale__timer-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.sale__timer-number {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 150px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: -15px;
+}
+.sale__timer-text {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 1.5px;
 }
 
 .statistics {
@@ -510,7 +543,6 @@ a {
 }
 .pricing__item {
   width: 379px;
-  height: 338px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,7 +551,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #f2f2f2;
-  padding: 48px 0 40px;
+  padding: 48px 0 50px;
   border-radius: 20px;
   margin-bottom: 16px;
 }
@@ -574,7 +606,7 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   width: 129px;
-  height: 40px;
+  padding: 11px 0;
   background: inherit;
   border: 0;
   border-radius: 4px;
@@ -648,21 +680,6 @@ a {
   line-height: 20px;
   margin-bottom: 30px;
 }
-.testimonials__item-button {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
-  width: 129px;
-  height: 40px;
-  background: inherit;
-  border: 0;
-  border-radius: 4px;
-  margin: 0 auto;
-}
 
 .download {
   padding: 100px 0 140px;
@@ -700,6 +717,7 @@ a {
   width: 600px;
   margin: 0 auto 25px;
 }
+
 .faq {
   background: #e5e5e5;
   color: #222222;

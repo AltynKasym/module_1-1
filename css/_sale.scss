@@ -1,24 +1,49 @@
 .sale {
   background: url("../img/bg.png") no-repeat center;
   height: 436px;
+  color: #ffffff;
+  font-weight: 700;
 
   &__title {
-    font-weight: 700;
     font-size: 50px;
     line-height: 75px;
     text-align: center;
     letter-spacing: 1.1px;
     text-transform: uppercase;
-    color: #ffffff;
     padding-top: 60px;
   }
 
   &__paragraph {
-    font-weight: 700;
     font-size: 30px;
     line-height: 45px;
     text-align: center;
     letter-spacing: 1.5px;
     color: #ffffff;
+  }
+
+  &__timer {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 195px 0 215px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-number {
+      font-weight: 400;
+      font-size: 100px;
+      line-height: 150px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      margin-bottom: -15px;
+    }
+    &-text {
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
   }
 }

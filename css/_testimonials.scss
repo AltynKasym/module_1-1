@@ -34,7 +34,6 @@
 
   &__item {
     width: 379px;
-    // height: 338px;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -61,22 +60,6 @@
       font-size: 14px;
       line-height: 20px;
       margin-bottom: 30px;
-    }
-
-    &-button {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 18px;
-      text-align: center;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #ffffff;
-      width: 129px;
-      height: 40px;
-      background: inherit;
-      border: 0;
-      border-radius: 4px;
-      margin: 0 auto;
     }
   }
 }

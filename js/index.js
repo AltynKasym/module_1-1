@@ -9,7 +9,7 @@ function loadDatabase() {
   xhr.onload = function () {
     if (this.status === 200) {
       const database = JSON.parse(this.response);
-      timer.append(database.timerEndDate);
+      // timer.append(database.timerEndDate);
       headerLink.setAttribute("href", database.appStoreLink);
     } else {
       alert("Service not found");
