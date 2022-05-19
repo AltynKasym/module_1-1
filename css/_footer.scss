@@ -1,0 +1,16 @@
+.footer {
+  background: #f2f2f2;
+  padding: 125px 0;
+  text-align: center;
+
+  &__logo {
+    margin-bottom: 18px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    width: 112px;
+    margin: 0 auto;
+  }
+}

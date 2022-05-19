@@ -396,7 +396,7 @@ a {
 .dark {
   position: relative;
   top: 15px;
-  padding: 100px 0 160px;
+  padding: 100px 0 161px;
   background-color: #222222;
 }
 .dark__inner {
@@ -475,7 +475,7 @@ a {
 }
 
 .pricing {
-  padding: 115px 0 84px;
+  padding: 114px 0 84px;
   background-color: #fff;
 }
 .pricing__title {
@@ -703,7 +703,7 @@ a {
 .faq {
   background: #e5e5e5;
   color: #222222;
-  padding: 105px 0;
+  padding: 105px 0 110px;
 }
 .faq__title {
   font-weight: 400;
@@ -743,4 +743,23 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+}
+
+.footer {
+  background: #f2f2f2;
+  padding: 125px 0;
+  text-align: center;
+}
+.footer__logo {
+  margin-bottom: 18px;
+}
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 112px;
+  margin: 0 auto;
 }
