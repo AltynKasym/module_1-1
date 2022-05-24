@@ -1,0 +1,36 @@
+.download {
+  padding: 100px 0 140px;
+  background-color: #fff;
+}
+.download__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.download__title {
+  color: #222222;
+}
+.download__subtitle {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: #222222;
+  margin: 0 auto 15px;
+}
+.download__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #666666;
+  width: 600px;
+  margin: 0 auto 25px;
+}

@@ -1,0 +1,106 @@
+.theme {
+  position: relative;
+  top: 15px;
+  padding: 100px 0 161px;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #222222;
+}
+.theme__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.theme__title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  width: 495px;
+  text-align: center;
+  margin: 0 auto 14px;
+}
+.theme__title span {
+  color: #ff9209;
+}
+.theme__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  width: 580px;
+  margin: 0 auto 36px;
+}
+.theme__image {
+  width: 600px;
+  margin: 0 auto;
+  padding: 0 100px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.theme .section-title {
+  color: inherit;
+}
+
+.theme__mode {
+  display: flex;
+  justify-content: space-between;
+  width: 288px;
+  padding-right: 20px;
+}
+.theme__mode-toggle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 60px;
+  cursor: pointer;
+}
+.theme__mode-toggle:nth-child(1)::before {
+  content: url("../img/light-mode.svg");
+  position: relative;
+  left: 50%;
+  top: -20px;
+}
+.theme__mode-toggle:nth-child(2) {
+  color: #ff9209;
+}
+.theme__mode-toggle:nth-child(2)::before {
+  content: url("../img/dark-mode.svg");
+  fill: "#FF9209";
+  position: relative;
+  left: 50%;
+  top: -20px;
+}
+
+.light-mode:nth-child(1)::before {
+  content: url("../img/light-mode_inlight.svg");
+  position: relative;
+  left: 50%;
+  top: -20px;
+}
+.light-mode:nth-child(1) {
+  color: #ff9209;
+}
+.light-mode:nth-child(2) {
+  color: #000;
+}
+.light-mode:nth-child(2)::before {
+  content: url("../img/dark-mode-inlight.svg");
+  fill: "#FF9209";
+  position: relative;
+  left: 50%;
+  top: -20px;
+}

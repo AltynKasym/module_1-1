@@ -1,0 +1,18 @@
+.footer {
+  background: #f2f2f2;
+  padding: 125px 0;
+  text-align: center;
+}
+.footer__logo {
+  margin-bottom: 18px;
+}
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 112px;
+  margin: 0 auto;
+}

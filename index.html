@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
@@ -18,13 +18,19 @@
           <img class="header__logo" src="./img/header-logo.svg" alt="logo" />
           <nav class="header__menu">
             <ul class="header__menu-list">
-              <li class="header__menu-item">Features</li>
-              <li class="header__menu-item">Pricing</li>
-              <li class="header__menu-item">Testimonials</li>
-              <li class="header__menu-item">FAQ</li>
+              <li class="header__menu-item">
+                <a href="#features">Features</a>
+              </li>
+              <li class="header__menu-item"><a href="#pricing">Pricing</a></li>
+              <li class="header__menu-item">
+                <a href="#testimonials">Testimonials</a>
+              </li>
+              <li class="header__menu-item"><a href="#faq">FAQ</a></li>
             </ul>
 
-            <a href="#" class="header__link" target="_blank">Get this app</a>
+            <button class="header__button">
+              <a href="#" target="_blank">Get this app</a>
+            </button>
           </nav>
         </div>
       </div>
@@ -34,24 +40,24 @@
       <div class="container">
         <h1 class="sale__title">big sale on lifetime plan</h1>
         <p class="sale__paragraph">there is very little left</p>
-        <ul class="sale__timer">
-          <li class="sale__timer-item">
+        <div class="sale__timer">
+          <div class="sale__timer-item">
             <h2 class="sale__timer-number">14<span> | </span></h2>
             <span class="sale__timer-text">days</span>
-          </li>
-          <li class="sale__timer-item">
+          </div>
+          <div class="sale__timer-item">
             <h2 class="sale__timer-number">03<span> | </span></h2>
             <span class="sale__timer-text">hours</span>
-          </li>
-          <li class="sale__timer-item">
+          </div>
+          <div class="sale__timer-item">
             <h2 class="sale__timer-number">26<span> | </span></h2>
             <span class="sale__timer-text">minutes</span>
-          </li>
-          <li class="sale__timer-item">
+          </div>
+          <div class="sale__timer-item">
             <h2 class="sale__timer-number">59</h2>
             <span class="sale__timer-text">seconds</span>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -61,16 +67,16 @@
           <div class="banner__info">
             <img
               src="./img/header-logo.svg"
-              alt="banner"
+              alt="The future of digital photos"
               class="banner__info-logo"
             />
             <h1 class="banner__info-title">The future of digital photos.</h1>
-            <h1 class="banner__info-text">
+            <p class="banner__info-text">
               The H(app)y app is the latest & greatest in phone photography.
               It's available in the App Store right now. Go check it out!
-            </h1>
+            </p>
             <div class="banner__info-buttons">
-              <button class="banner__info-button">buy now</button>
+              <button class="banner__info-button button-buy">buy now</button>
               <button class="banner__info-button">read more</button>
             </div>
           </div>
@@ -82,10 +88,77 @@
             />
           </div>
         </div>
+        <div class="modal">
+          <div class="modal__inner">
+            <h2 class="modal-title">
+              Leave a request for the purchase of goods
+            </h2>
+            <form action="" class="modal-form">
+              <div class="modal__input">
+                <input
+                  type="text"
+                  name="first_name"
+                  class="modal__input-item"
+                  placeholder="name"
+                />
+                <span class="modal__input-error"></span>
+                <input
+                  type="email"
+                  name="email"
+                  class="modal__input-item"
+                  placeholder="email"
+                />
+                <span class="modal__input-error"></span>
+              </div>
+
+              <h3 class="modal-subtitle">Your plan?</h3>
+              <div class="modal__button">
+                <button class="modal__button-item">Standart</button>
+                <button class="modal__button-item">Premium</button>
+                <button class="modal__button-item modal__button-select">
+                  Lifetime
+                </button>
+              </div>
+
+              <p class="modal-subtitle">How did you know about our app?</p>
+
+              <div class="modal__checkbox">
+                <label class="modal__checkbox-item"
+                  ><input
+                    type="checkbox"
+                    class="modal__checkbox-check"
+                  />Facebook</label
+                >
+
+                <label class="modal__checkbox-item"
+                  ><input
+                    type="checkbox"
+                    class="modal__checkbox-check"
+                  />Instagram</label
+                >
+
+                <label class="modal__checkbox-item"
+                  ><input
+                    type="checkbox"
+                    class="modal__checkbox-check"
+                  />Youtube</label
+                >
+
+                <label class="modal__checkbox-item"
+                  ><input
+                    type="checkbox"
+                    class="modal__checkbox-check"
+                  />Other</label
+                >
+              </div>
+              <button class="modal_sendButton">send</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="futures">
+    <section class="futures" id="features">
       <div class="container">
         <div class="futures__inner">
           <h2 class="section-title">Features</h2>
@@ -94,7 +167,6 @@
           </h3>
           <ul class="futures__list">
             <li class="futures__item">
-              <!-- <div class="futures__item-inner"> -->
               <img
                 src="./img/futures/futures1.png"
                 alt="Calendar view"
@@ -102,13 +174,11 @@
               />
               <div class="futures__item-info">
                 <h2 class="futures__item-title">Calendar view</h2>
-                <h2 class="futures__item-text">
+                <p class="futures__item-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam scelerisque aliquam odio et faucibus.
-                </h2>
+                </p>
               </div>
-
-              <!-- </div> -->
             </li>
             <li class="futures__item">
               <img
@@ -118,10 +188,10 @@
               />
               <div class="futures__item-info">
                 <h2 class="futures__item-title">Lists</h2>
-                <h2 class="futures__item-text">
+                <p class="futures__item-text">
                   Dolor sit amet urna turpis. Mauris euismod elit et nisi
                   ultrices, ut faucibus orci tincidunt.
-                </h2>
+                </p>
               </div>
             </li>
             <li class="futures__item">
@@ -132,10 +202,10 @@
               />
               <div class="futures__item-info">
                 <h2 class="futures__item-title">Varied type</h2>
-                <h2 class="futures__item-text">
+                <p class="futures__item-text">
                   Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex,
                   condimentum dapibus congue.
-                </h2>
+                </p>
               </div>
             </li>
             <li class="futures__item">
@@ -146,10 +216,10 @@
               />
               <div class="futures__item-info">
                 <h2 class="futures__item-title">Split-screen</h2>
-                <h2 class="futures__item-text">
+                <p class="futures__item-text">
                   Vestibulum ultrices, orci nec egestas pharetra, ligula est
                   semper enim, nec auctor sapien leo nec purus.
-                </h2>
+                </p>
               </div>
             </li>
             <li class="futures__item">
@@ -160,10 +230,10 @@
               />
               <div class="futures__item-info">
                 <h2 class="futures__item-title">Uploads</h2>
-                <h2 class="futures__item-text">
+                <p class="futures__item-text">
                   Duis tristique sed lorem a vestibulum. Cras commodo consequat
                   orci, in convallis risus egestas non.
-                </h2>
+                </p>
               </div>
             </li>
             <li class="futures__item">
@@ -187,22 +257,22 @@
 
     <section class="statistics">
       <div class="container">
-        <ul class="statistics__inner">
-          <li class="statistics__block">
+        <div class="statistics__inner">
+          <div class="statistics__block">
             <h3 class="statistics__block-number">400+</h3>
             <span class="statistics__block-text">Pictures analyzed</span>
-          </li>
+          </div>
 
-          <li class="statistics__block">
+          <div class="statistics__block">
             <h3 class="statistics__block-number">25+</h3>
             <span class="statistics__block-text">Operations per minute</span>
-          </li>
+          </div>
 
-          <li class="statistics__block">
+          <div class="statistics__block">
             <h3 class="statistics__block-number">95%</h3>
             <span class="statistics__block-text">Accuracy</span>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -214,18 +284,18 @@
             <h1 class="technology__info-title">
               Use H(app)y to give your digital photos some pop.
             </h1>
-            <h1 class="technology__info-text">
+            <p class="technology__info-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
               libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
               lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
-            </h1>
+            </p>
           </div>
           <div class="technology__media">
             <img
               src="./img/technology.png"
-              alt="technology"
+              alt="Use H(app)y to give your digital photos some pop"
               class="technology__media-image"
             />
           </div>
@@ -239,7 +309,7 @@
           <div class="security__media">
             <img
               src="./img/security.png"
-              alt="technology"
+              alt="State-of-the-art processing capabilities"
               class="security__media-image"
             />
           </div>
@@ -248,37 +318,37 @@
             <h1 class="security__info-title">
               State-of-the-art processing capabilities.
             </h1>
-            <h1 class="security__info-text">
+            <p class="security__info-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
               libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
               lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
-            </h1>
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="dark">
+    <section class="theme">
       <div class="container">
-        <div class="dark__inner">
+        <div class="theme__inner">
           <h2 class="section-title">Dark mode</h2>
-          <h3 class="dark__title">Also available in <span>dark</span>.</h3>
-          <p class="dark__text">
+          <h3 class="theme__title">Also available in <span>dark</span>.</h3>
+          <p class="theme__text">
             Don't get blinded when using the H(app)y app at night, just turn off
             the lights. Lorem ipsum dolor sit amet.
           </p>
-          <img src="./img/dark.png" alt="Dark mode" class="dark__image" />
-          <div class="dark__mode">
-            <span class="dark__mode-toggle">light mode</span
-            ><span class="dark__mode-toggle">dark mode</span>
+          <img src="./img/dark.png" alt="Dark mode" class="theme__image" />
+          <div class="theme__mode">
+            <span class="theme__mode-toggle">light mode</span
+            ><span class="theme__mode-toggle">dark mode</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="pricing">
       <div class="container">
         <div class="pricing__inner">
           <h2 class="section-title pricing__title">Pricing</h2>
@@ -290,28 +360,34 @@
           <ul class="pricing__list">
             <li class="pricing__item">
               <h2 class="pricing__item-title">Standard</h2>
-              <h2 class="pricing__item-price">$9</h2>
+              <p class="pricing__item-price">$9</p>
               <span class="pricing__item-period">monthly</span>
-              <button class="pricing__item-button">buy now</button>
+              <button class="pricing__item-button button-buy standard">
+                buy now
+              </button>
             </li>
             <li class="pricing__item">
               <h2 class="pricing__item-title">Premium</h2>
-              <h2 class="pricing__item-price">$99</h2>
+              <p class="pricing__item-price">$99</p>
               <span class="pricing__item-period">annualy</span>
-              <button class="pricing__item-button">buy now</button>
+              <button class="pricing__item-button button-buy premium">
+                buy now
+              </button>
             </li>
             <li class="pricing__item">
               <h2 class="pricing__item-title">Lifetime</h2>
-              <h2 class="pricing__item-price">$149</h2>
+              <p class="pricing__item-price">$149</p>
               <span class="pricing__item-period">up front</span>
-              <button class="pricing__item-button">buy now</button>
+              <button class="pricing__item-button button-buy lifetime">
+                buy now
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
       <div class="container">
         <div class="testimonials__inner">
           <h2 class="section-title testimonials__title">testimonials</h2>
@@ -324,7 +400,7 @@
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus.
               </h2>
-              <h2 class="testimonials__item-name">Pam Beesly</h2>
+              <p class="testimonials__item-name">Pam Beesly</p>
               <span class="testimonials__item-position"
                 >Top Manager Happy Co</span
               >
@@ -335,7 +411,7 @@
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus.
               </h2>
-              <h2 class="testimonials__item-name">Pam Beesly</h2>
+              <p class="testimonials__item-name">Pam Beesly</p>
               <span class="testimonials__item-position"
                 >Top Manager Happy Co</span
               >
@@ -346,7 +422,7 @@
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus.
               </h2>
-              <h2 class="testimonials__item-name">Pam Beesly</h2>
+              <p class="testimonials__item-name">Pam Beesly</p>
               <span class="testimonials__item-position"
                 >Top Manager Happy Co</span
               >
@@ -374,7 +450,7 @@
       </div>
     </section>
 
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="container">
         <div class="faq__inner">
           <h2 class="faq__title">faq</h2>

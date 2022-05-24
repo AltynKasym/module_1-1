@@ -1,0 +1,104 @@
+.futures {
+  position: relative;
+  top: -322px;
+  padding: 100px 0 84px;
+  background-color: #222222;
+  margin-bottom: -322px;
+}
+.futures__title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  color: #ffffff;
+  width: 495px;
+  text-align: center;
+  margin: 0 auto 45px;
+}
+.futures__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.futures__item {
+  position: relative;
+  background-color: #fff;
+  width: 379px;
+  height: 490px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.futures__item::before {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  -webkit-transform: translate(-51%);
+  -ms-transform: translate(-51%);
+  transform: translate(-51%);
+  display: block;
+  z-index: 1;
+}
+.futures__item:nth-child(1) {
+  color: #0278ed;
+}
+.futures__item:nth-child(1):before {
+  content: url("../img/futures/calendar.svg");
+}
+.futures__item:nth-child(2) {
+  color: #ff5437;
+}
+.futures__item:nth-child(2):before {
+  content: url("../img/futures/lists.svg");
+}
+.futures__item:nth-child(3) {
+  color: #ff9209;
+}
+.futures__item:nth-child(3):before {
+  content: url("../img/futures/varied-type.svg");
+}
+.futures__item:nth-child(4) {
+  color: #e738ce;
+}
+.futures__item:nth-child(4):before {
+  content: url("../img/futures/split-screen.svg");
+}
+.futures__item:nth-child(5) {
+  color: #00c6df;
+}
+.futures__item:nth-child(5):before {
+  content: url("../img/futures/uploads.svg");
+}
+.futures__item:nth-child(6) {
+  color: #b25df8;
+}
+.futures__item:nth-child(6):before {
+  content: url("../img/futures/focus-mode.svg");
+}
+.futures__item-image {
+  width: 227px;
+  padding-top: 39.53px;
+}
+.futures__item-info {
+  position: relative;
+  top: -202px;
+  background: #f2f2f2;
+  padding: 48px 47px 40px;
+  border-radius: 0 0 20px 20px;
+}
+.futures__item-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 11px;
+}
+.futures__item-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #222222;
+}

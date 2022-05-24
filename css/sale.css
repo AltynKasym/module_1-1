@@ -1,0 +1,57 @@
+.sale {
+  background: url("../img/bg.png") repeat-x center;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 60px 0 78px;
+  margin-top: 90px;
+}
+.sale__title {
+  font-size: 50px;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+.sale__paragraph {
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+.sale__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 5px 194px 0 215px;
+}
+.sale__timer-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.sale__timer-number {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 150px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: -13px;
+}
+.sale__timer-text {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-left: 5%;
+}

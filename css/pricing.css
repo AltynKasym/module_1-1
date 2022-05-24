@@ -1,0 +1,105 @@
+.pricing {
+  padding: 114px 0 84px;
+  background-color: #fff;
+}
+.pricing__title {
+  color: #222222;
+}
+.pricing__subtitle {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: #222222;
+  margin: 0 auto 15px;
+}
+.pricing__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #666666;
+  width: 570px;
+  margin: 0 auto 41px;
+}
+.pricing__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.pricing__item {
+  width: 379px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #f2f2f2;
+  padding: 48px 0 50px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.pricing__item:nth-child(1) {
+  color: #0278ed;
+}
+.pricing__item:nth-child(1) button {
+  background: #0278ed;
+}
+.pricing__item:nth-child(2) {
+  color: #ff5437;
+}
+.pricing__item:nth-child(2) button {
+  background: #ff5437;
+}
+.pricing__item:nth-child(3) {
+  color: #ff9209;
+}
+.pricing__item:nth-child(3) button {
+  background: #ff9209;
+}
+.pricing__item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+.pricing__item-price {
+  font-weight: 400;
+  font-size: 108px;
+  line-height: 124px;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: -12px 0 25px;
+}
+.pricing__item-period {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 19px;
+}
+.pricing__item-button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 129px;
+  padding: 11px 0;
+  background: inherit;
+  border: 0;
+  border-radius: 4px;
+  margin: 0 auto;
+}

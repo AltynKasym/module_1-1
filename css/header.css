@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15);
+  z-index: 8;
+  width: 100%;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.header__logo {
+  padding: 25px 0 25px 16px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__menu-list {
+  display: flex;
+  margin-right: 55px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.header__menu-item {
+  padding-left: 42px;
+}
+
+.header__menu-item a {
+  color: #666666;
+}
+
+.header__button {
+  margin-right: 8px;
+  padding: 8px 28px 10px;
+  background-color: #222222;
+  border-radius: 4px;
+}
+
+.header__button a {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
