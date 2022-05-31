@@ -1,9 +1,9 @@
 .futures {
   position: relative;
-  top: -322px;
+  top: -286px;
   padding: 100px 0 84px;
   background-color: #222222;
-  margin-bottom: -322px;
+  margin-bottom: -289px;
 }
 .futures__title {
   font-weight: 400;
@@ -15,14 +15,10 @@
   margin: 0 auto 45px;
 }
 .futures__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  gap: 15px;
+  justify-content: center;
 }
 .futures__item {
   position: relative;
@@ -31,14 +27,11 @@
   height: 490px;
   text-align: center;
   border-radius: 20px;
-  margin-bottom: 16px;
 }
 .futures__item::before {
   position: absolute;
   top: 260px;
   left: 50%;
-  -webkit-transform: translate(-51%);
-  -ms-transform: translate(-51%);
   transform: translate(-51%);
   display: block;
   z-index: 1;
@@ -101,4 +94,16 @@
   font-size: 15px;
   line-height: 22px;
   color: #222222;
+}
+
+@media screen and (max-width: 800px) {
+  .futures__title {
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 36px;
+    color: #ffffff;
+    width: 495px;
+    text-align: center;
+    margin: 0 auto 45px;
+  }
 }

@@ -3,12 +3,7 @@
   background-color: #ff5437;
 }
 .statistics__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .statistics__block {
   width: 378px;
@@ -30,4 +25,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media screen and (max-width: 800px) {
 }

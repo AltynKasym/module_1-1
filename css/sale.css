@@ -20,25 +20,28 @@
   color: #ffffff;
 }
 .sale__timer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: relative;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 5px 194px 0 215px;
+  padding-top: 2px;
+  /* padding: 5px 194px 0 215px; */
+  width: 64%;
 }
 .sale__timer-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: relative;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
+  min-width: 130px;
+}
+
+.sale__timer-item:nth-child(-n + 3)::after {
+  content: "|";
+  position: absolute;
+  font-size: 100px;
+  font-weight: 400;
+  left: 145px;
 }
 .sale__timer-number {
   font-weight: 400;

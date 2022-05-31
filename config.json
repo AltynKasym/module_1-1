@@ -1,10 +1,10 @@
 {
   "plans": [
-    { "name": "standart", "price": 9 },
+    { "name": "standard", "price": 9 },
     { "name": "premium", "price": 99 },
     { "name": "lifetime", "price": 149 }
   ],
-  "timerEndDate": "01.07.2022 11:00",
+  "timerEndDate": "15.06.2022 12:00",
   "testimonials": [
     {
       "name": "Pam Beesly",
