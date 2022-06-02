@@ -4,11 +4,13 @@
   padding: 100px 0 161px;
   background-color: #222222;
   color: #ffffff;
+  transition: 0.2s;
 }
 
 .light {
   background-color: #ffffff;
   color: #222222;
+  transition: 0.2s;
 }
 .theme__inner {
   display: -webkit-box;
@@ -26,7 +28,7 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 36px;
-  width: 495px;
+  /* width: 495px; */
   text-align: center;
   margin: 0 auto 14px;
 }
@@ -38,7 +40,7 @@
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  width: 580px;
+  width: 50%;
   margin: 0 auto 36px;
 }
 .theme__image {
@@ -103,4 +105,15 @@
   position: relative;
   left: 50%;
   top: -20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .security__inner {
+    display: flex;
+    padding: 100px 0;
+    flex-direction: column;
+  }
+  .theme__image {
+    width: 80%;
+  }
 }

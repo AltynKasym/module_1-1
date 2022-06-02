@@ -1,6 +1,4 @@
 .security {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   top: -207px;
@@ -12,9 +10,8 @@
   color: #222222;
 }
 .security__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
 }
 .security__media {
   margin: 100px 100px 0 100px;
@@ -23,7 +20,8 @@
   width: 376px;
 }
 .security__info {
-  margin: 177px 100px 155px 94px;
+  margin: 177px 90px 155px 0px;
+  width: 35%;
 }
 .security__info-title {
   font-style: normal;
@@ -39,4 +37,15 @@
   line-height: 24px;
   color: #222222;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .security__inner {
+    display: flex;
+    padding: 100px 0;
+    flex-direction: column;
+  }
+  .security__media-image {
+    width: 80%;
+  }
 }

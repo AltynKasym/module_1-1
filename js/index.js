@@ -2,6 +2,7 @@ window.addEventListener("load", loadDatabase);
 
 const testimonials = [],
   plans = [],
+  prices = [],
   timer = [],
   link = [];
 
@@ -15,7 +16,10 @@ function loadDatabase() {
         testimonials.push(testimonial);
       });
 
-      data.plans.forEach((plan) => plans.push(plan));
+      data.plans.forEach((plan) => {
+        plans.push(plan);
+        prices.push(plan.price);
+      });
 
       timer.push(data.timerEndDate);
       link.push(data.appStoreLink);
@@ -24,15 +28,15 @@ function loadDatabase() {
       showTimer();
       showPlans();
       showTestimonials();
-      count();
+      changePlan();
     });
 }
 
-// Установка ссылки в header
+// Ссылки для загрузки приложения
 
 const setLink = function () {
-  const headerButton = document.querySelector(".header__button a");
-  headerButton.setAttribute("href", link[0]);
+  const headerButton = document.querySelectorAll(".download__button");
+  headerButton.forEach((button) => button.setAttribute("href", link[0]));
 };
 
 // Таймер
@@ -56,8 +60,9 @@ const showTimer = function () {
     let dateData = { days, hours, minutes, seconds };
 
     if (period < 0) {
-      document.querySelector(".sale").style.display = "none";
+      document.querySelector(".sale").classList.remove("visable");
     } else {
+      document.querySelector(".sale").classList.add("visable");
       Object.keys(dateData).map((item) => {
         document.querySelector(`.${item}`).innerText =
           `${dateData[item]}` < 10
@@ -72,7 +77,7 @@ const showTimer = function () {
 
 // Шаблон для создания карточек
 
-const createCard = function (type, className, text, dataName, data) {
+const createCard = function (type, className, text, attrName, attr) {
   const element = document.createElement(type);
   if (className) {
     element.classList.add(className);
@@ -80,13 +85,13 @@ const createCard = function (type, className, text, dataName, data) {
   if (text) {
     element.append(text);
   }
-  if (data) {
-    element.setAttribute(dataName, data);
+  if (attr) {
+    element.setAttribute(attrName, attr);
   }
   return element;
 };
 
-// Создание карточек - План
+// Создание карточек - Тарифнай план
 
 const showPlans = function () {
   const pricingList = document.querySelector(".pricing__list");
@@ -101,7 +106,7 @@ const showPlans = function () {
       "pricing__item-period",
       "buy now",
       "data-price",
-      plan.name
+      plan.price
     );
 
     const button = createCard(
@@ -112,28 +117,35 @@ const showPlans = function () {
       plan.name
     );
 
+    prices.sort((a, b) => b - a);
+
     switch (span.getAttribute("data-price")) {
-      case "standard":
+      case `${prices[2]}`:
         span.textContent = "Monthly";
         break;
-      case "premium":
+      case `${prices[1]}`:
         span.textContent = "Annual";
         break;
-      case "lifetime":
+      case `${prices[0]}`:
         span.textContent = "Up front";
         break;
     }
+
+    buttonPrice[2].checked = true;
 
     button.className = "pricing__item-button button-buy";
 
     // Автоматический выбор тарифа
 
+    const body = document.querySelector("body");
+
     button.addEventListener("click", () => {
       modal.style.display = "block";
+      body.classList.add("non-scroll");
 
       if (button.dataset.price == buttonPrice[ind].id) {
         buttonPrice[ind].checked = true;
-      } else buttonPrice[2].checked = true;
+      }
     });
 
     li.append(h2, p, span, button);
@@ -161,72 +173,48 @@ const showTestimonials = function () {
   });
 };
 
-// Change the plan
+// Выбор тарифного плана
 
 const buttonBuy = document.querySelectorAll(".pricing__item-button");
 const buttonPrice = document.querySelectorAll(".modal__button-input");
+const priceName = document.querySelectorAll(".modal__button-item");
 
-buttonBuy.forEach((button, ind) => {
-  button.onclick = () => {
-    if (button.dataset.price == buttonPrice[ind].id) {
-      buttonPrice[ind].checked = true;
-    }
-  };
-});
+const changePlan = function () {
+  plans.forEach((plan, ind) => {
+    priceName[ind].textContent = plan.name;
+    priceName[ind].setAttribute("for", plan.name);
+    buttonPrice[ind].setAttribute("id", plan.name);
+  });
 
-// Open Modal window
+  buttonBuy.forEach((button, ind) => {
+    button.onclick = () => {
+      if (button.dataset.price == buttonPrice[ind].id) {
+        buttonPrice[ind].checked = true;
+      }
+    };
+  });
+};
+
+// Открытие модального окна
 
 const bannerButton = document.querySelectorAll(".button-buy");
 const closeButton = document.querySelector(".modal__closeButton");
 const modal = document.querySelector(".modal");
+const body = document.querySelector("body");
 
 bannerButton.forEach((button) => {
-  button.addEventListener("click", (e) => {
+  button.addEventListener("click", () => {
     modal.style.display = "block";
+    body.classList.add("non-scroll");
   });
 });
 
 closeButton.addEventListener("click", () => {
   modal.style.display = "none";
+  body.classList.remove("non-scroll");
 });
 
-// Send data
-
-const sendButton = document.querySelector(".modal_sendButton");
-sendButton.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  // Validate inputs
-
-  let error = document.querySelectorAll(".modal__input-error");
-  let inputs = document.querySelectorAll(".modal__input-item");
-
-  // const emailReg = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
-
-  inputs.forEach((input, ind) => {
-    // input.onblur = function () {
-    //   input.style.background = "#FFEEEE";
-    //   if (input.value.trim().length < 1) {
-    //     error[ind].textContent = "required field*";
-    //     error[ind].style.opacity = "1";
-    //   } else if (input.value.trim().length < 3) {
-    //     error[ind].textContent = `should be more then 3 symbols`;
-    //     error[ind].style.opacity = "1";
-    //   }
-    //   // else if (emailReg.test(inputs[1].value) !== true) {
-    //   //   error[1].textContent = `should be consist email characters`;
-    //   //   error[1].style.opacity = "1";
-    //   // }
-    //   else {
-    //     error[ind].style.opacity = "0";
-    //     input.style.background = "#e5f4ff";
-    //   }
-    // };
-    // input.addEventListener('')
-  });
-});
-
-// Change Theme
+// Изменение темы
 
 let changeModeButton = document.querySelector(".theme__mode");
 let theme = document.querySelector(".theme");
@@ -253,3 +241,72 @@ function changeTheme(e) {
     });
   }
 }
+
+// Send data
+
+const sendButton = document.querySelector(".modal_sendButton");
+const inputs = document.querySelectorAll(".modal__input-item");
+const checkbox = document.querySelectorAll(".modal__checkbox-check");
+const checkboxItem = document.querySelectorAll(".modal__checkbox-item");
+const error = document.querySelectorAll(".modal__input-error");
+
+const emailReg = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+console.log(checkbox);
+
+// Валидация формы
+
+let valid = [false, false, false];
+
+inputs.forEach((input, ind) => {
+  input.oninput = function () {
+    if (input.value.trim().length < 1) {
+      input.style.background = "#FFEEEE";
+      error[ind].classList.add("show-errorZero");
+      error[ind].classList.remove("show-errorThree");
+      valid[ind] = false;
+    } else if (input.value.trim().length < 3) {
+      input.style.background = "#FFEEEE";
+      error[ind].classList.add("show-errorThree");
+      valid[ind] = false;
+    } else {
+      error[ind].classList.remove("show-errorZero");
+      error[ind].classList.remove("show-errorThree");
+      input.style.background = "#e5f4ff";
+      valid[ind] = true;
+    }
+
+    // else if (emailReg.test(inputs[1].value) !== true) {
+    //   error[1].classList.add("show-errorZero");
+    // }
+  };
+});
+
+checkboxItem.forEach((check, ind) => {
+  check.addEventListener("click", () => {
+    check.toggleAttribute("checked");
+    valid[2] = true;
+    console.log(check.innerText);
+    buttonPrice[ind].checked;
+  });
+});
+
+if (valid[0] && valid[1]) {
+  sendButton.setAttribute("disabled", false);
+} else sendButton.setAttribute("disabled", true);
+
+sendButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (valid[0] && valid[1]) {
+    console.log(inputs[0].value, inputs[1].value);
+  }
+});
+
+// Бургер меню
+
+const burgerMenu = document.querySelector(".header__burgermenu");
+const menu = document.querySelector(".header__menu");
+
+burgerMenu.addEventListener('click',()=>{
+  menu.classList.toggle('header__menu-vision')
+})

@@ -1,16 +1,16 @@
 .futures {
   position: relative;
   top: -286px;
-  padding: 100px 0 84px;
+  padding: 100px 0 103px;
   background-color: #222222;
-  margin-bottom: -289px;
+  margin-bottom: -287px;
 }
 .futures__title {
   font-weight: 400;
   font-size: 32px;
   line-height: 36px;
   color: #ffffff;
-  width: 495px;
+  width: 50%;
   text-align: center;
   margin: 0 auto 45px;
 }

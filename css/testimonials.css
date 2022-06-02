@@ -19,18 +19,13 @@
   line-height: 24px;
   text-align: center;
   color: #666666;
-  width: 570px;
+  /* width: 570px; */
   margin: 0 auto 43px;
 }
 .testimonials__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .testimonials__item {
   width: 379px;

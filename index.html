@@ -29,9 +29,16 @@
             </ul>
 
             <button class="header__button">
-              <a href="#" target="_blank">Get this app</a>
+              <a href="#" target="_blank" class="download__button"
+                >Get this app</a
+              >
             </button>
           </nav>
+          <img
+            src="./img/burger-menu.svg"
+            alt="Меню"
+            class="header__burgermenu"
+          />
         </div>
       </div>
     </header>
@@ -117,51 +124,41 @@
                   class="modal__input-item"
                   placeholder="name"
                 />
-                <span class="modal__input-error">name error</span>
+                <span class="modal__input-error"></span>
                 <input
                   type="email"
                   name="email"
                   class="modal__input-item"
                   placeholder="email"
                 />
-                <span class="modal__input-error">email error</span>
+                <span class="modal__input-error"></span>
               </div>
 
               <h3 class="modal-subtitle">Your plan?</h3>
               <div class="modal__button">
                 <input
                   type="radio"
-                  value="standard"
                   id="standard"
                   name="radio"
                   class="modal__button-input"
                 />
-                <label for="standard" class="modal__button-item">
-                  Standard
-                </label>
+                <label for="standard" class="modal__button-item"> </label>
 
                 <input
                   type="radio"
-                  value="premium"
                   id="premium"
                   name="radio"
                   class="modal__button-input"
                 />
-                <label for="premium" class="modal__button-item">
-                  Premium
-                </label>
+                <label for="premium" class="modal__button-item"> </label>
 
                 <input
                   type="radio"
-                  value="lifetime"
                   id="lifetime"
                   name="radio"
                   class="modal__button-input"
-                  checked
                 />
-                <label for="lifetime" class="modal__button-item"
-                  >Lifetime</label
-                >
+                <label for="lifetime" class="modal__button-item"></label>
               </div>
 
               <p class="modal-subtitle">How did you know about our app?</p>
@@ -197,8 +194,11 @@
                   type="checkbox"
                   class="modal__checkbox-check"
                   id="other"
+                  value="other"
                 />
-                <label for="other" class="modal__checkbox-item">Other</label>
+                <label for="other" class="modal__checkbox-item" value="other"
+                  >Other</label
+                >
               </div>
               <button class="modal_sendButton">send</button>
             </form>
@@ -433,11 +433,9 @@
             Duis tristique sed lorem a vestibulum. Cras commodo consequat orci,
             in convallis risus egestas non.
           </p>
-          <img
-            src="./img/download.png"
-            alt="Download app"
-            class="download__image"
-          />
+          <a href="#" class="download__button"
+            ><img src="./img/download.png" alt="Download app"
+          /></a>
         </div>
       </div>
     </section>

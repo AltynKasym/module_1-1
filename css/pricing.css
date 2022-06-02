@@ -19,18 +19,13 @@
   line-height: 24px;
   text-align: center;
   color: #666666;
-  width: 570px;
+  width: 50%;
   margin: 0 auto 41px;
 }
 .pricing__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .pricing__item {
   width: 379px;
@@ -69,6 +64,7 @@
   font-size: 18px;
   line-height: 24px;
   text-align: center;
+  text-transform: capitalize;
 }
 .pricing__item-price {
   font-weight: 400;
@@ -102,4 +98,15 @@
   border: 0;
   border-radius: 4px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .security__inner {
+    display: flex;
+    padding: 100px 0;
+    flex-direction: column;
+  }
+  .theme__image {
+    width: 80%;
+  }
 }

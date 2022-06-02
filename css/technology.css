@@ -1,6 +1,4 @@
 .technology {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .technology-title {
@@ -8,12 +6,11 @@
   color: #222222;
 }
 .technology__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  padding: 100px 0 0;
 }
 .technology__info {
-  margin: 177px 210px 155px 78px;
+  margin: 77px 0 55px 78px;
 }
 .technology__info-title {
   font-style: normal;
@@ -22,6 +19,7 @@
   line-height: 36px;
   color: #222222;
   margin-bottom: 17px;
+  width: 65%;
 }
 .technology__info-text {
   font-weight: 400;
@@ -29,11 +27,24 @@
   line-height: 24px;
   color: #222222;
   margin-bottom: 20px;
+  width: 65%;
 }
 .technology__media {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   margin-right: 100px;
 }
 .technology__media-image {
   width: 376px;
+}
+
+@media screen and (max-width: 1000px) {
+  .technology__inner {
+    display: flex;
+    padding: 100px 0;
+    flex-direction: column;
+  }
+
+  .technology__media-image {
+    width: 80%;
+  }
 }

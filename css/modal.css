@@ -8,18 +8,21 @@
   left: 0;
   z-index: 9;
   display: none;
+  overflow-y: auto;
 }
 
 .modal__inner {
   width: 506px;
   position: relative;
   top: 0px;
-  left: 37.8%;
+  left: 50%;
+  transform: translate(-50%);
   background: #fff;
   color: #000000;
   padding: 38px 95px;
   border-radius: 4px;
   z-index: 10;
+  margin: 60px 0 70px;
 }
 
 .modal__closeButton {
@@ -54,10 +57,15 @@
 
 .modal__input {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 8px;
 }
 
 .modal__input-error {
-  opacity: 0;
+  /* opacity: 0; */
+  /* display: none; */
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -95,7 +103,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  padding: 9px 130px;
+  padding: 9px 0px;
   width: 330px;
   border: 1px solid #0278ed;
   margin-bottom: 11px;
@@ -103,6 +111,7 @@
   cursor: pointer;
   background-color: #fff;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .modal__button-input:nth-child(1) + label {
@@ -154,21 +163,12 @@
   margin: 14px 0 0 45px;
 }
 .modal__checkbox-check {
-  /* margin-left: 20px;
-  margin-right: 19px;
-  width: 25px;
-  height: 25px;
-  border: none;
-  border-radius: 4px;
-  border: 1px solid #007dc6; */
   display: none;
 }
 
 .modal__checkbox-check:checked + label::before {
   content: url("/img/check_blue.svg");
-  padding: 4px 0 0 3px;
-  /* position: absolute; */
-  /* left: 185px; */
+  padding: 5px 0 0 4px;
 }
 
 .modal__checkbox-item::before {
@@ -199,6 +199,29 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  letter-spacing: 2px;
   text-align: center;
   cursor: pointer;
+}
+
+.modal_sendButton:disabled {
+  background: #777777;
+}
+
+.show-errorZero::before {
+  content: "required field*";
+  display: block;
+
+  position: absolute;
+  margin-top: -10px;
+  padding-left: 10px;
+}
+
+.show-errorThree::before {
+  content: "should be more then 3 symbols";
+  display: block;
+
+  position: absolute;
+  margin-top: -10px;
+  padding-left: 10px;
 }

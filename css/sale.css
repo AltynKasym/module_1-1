@@ -1,4 +1,5 @@
 .sale {
+  display: none;
   background: url("../img/bg.png") repeat-x center;
   color: #ffffff;
   font-weight: 700;
@@ -22,11 +23,10 @@
 .sale__timer {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   padding-top: 2px;
-  /* padding: 5px 194px 0 215px; */
-  width: 64%;
+  width: 90%;
 }
 .sale__timer-item {
   position: relative;
@@ -34,6 +34,10 @@
   flex-direction: column;
   align-items: center;
   min-width: 130px;
+}
+
+.sale__timer-item + .sale__timer-item {
+  margin-left: 80px;
 }
 
 .sale__timer-item:nth-child(-n + 3)::after {
@@ -57,4 +61,115 @@
   text-align: center;
   letter-spacing: 1.5px;
   margin-left: 5%;
+}
+
+.visable {
+  display: block;
+}
+
+@media screen and (max-width: 1000px) {
+  .sale__title {
+    font-size: 50px;
+    padding: 0 10px;
+  }
+  .sale__paragraph {
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  .sale__timer-item {
+    min-width: 120px;
+  }
+
+  .sale__timer-item + .sale__timer-item {
+    margin-left: 45px;
+  }
+
+  .sale__timer-number {
+    font-size: 80px;
+    margin-bottom: -20px;
+  }
+  .sale__timer-text {
+    font-size: 24px;
+  }
+
+  .sale__timer-item:nth-child(-n + 3)::after {
+    content: "|";
+    font-size: 80px;
+    top: 15px;
+    left: 130px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sale__title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    padding: 0 20px;
+  }
+  .sale__paragraph {
+    font-size: 22px;
+    color: #ffffff;
+    padding-top: 15px;
+  }
+
+  .sale__timer-item {
+    min-width: 100px;
+  }
+
+  .sale__timer-item + .sale__timer-item {
+    margin-left: 25px;
+  }
+
+  .sale__timer-number {
+    font-size: 60px;
+    margin-bottom: -35px;
+  }
+  .sale__timer-text {
+    font-size: 20px;
+  }
+
+  .sale__timer-item:nth-child(-n + 3)::after {
+    content: "|";
+    font-size: 60px;
+    top: 30px;
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sale__title {
+    /* font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 0 58px; */
+  }
+  .sale__paragraph {
+    font-size: 22px;
+    color: #ffffff;
+  }
+
+  .sale__timer-item {
+    min-width: 80px;
+  }
+
+  .sale__timer-item + .sale__timer-item {
+    margin-left: 10px;
+  }
+
+  .sale__timer-number {
+    font-size: 44px;
+    margin-bottom: -50px;
+  }
+  .sale__timer-text {
+    font-size: 16px;
+  }
+
+  .sale__timer-item:nth-child(-n + 3)::after {
+    content: "|";
+    font-size: 44px;
+    top: 42px;
+    left: 80px;
+  }
 }

@@ -1,5 +1,5 @@
 .download {
-  padding: 100px 0 140px;
+  padding: 100px 0 133px;
   background-color: #fff;
 }
 .download__inner {
@@ -31,6 +31,6 @@
   line-height: 24px;
   text-align: center;
   color: #666666;
-  width: 600px;
+  width: 50%;
   margin: 0 auto 25px;
 }

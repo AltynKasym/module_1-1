@@ -1,9 +1,10 @@
 .statistics {
-  padding: 80px 0 97px;
+  padding: 81px 0 97px;
   background-color: #ff5437;
 }
 .statistics__inner {
   display: flex;
+  justify-content: space-around;
 }
 .statistics__block {
   width: 378px;
@@ -28,4 +29,12 @@
 }
 
 @media screen and (max-width: 800px) {
+  .statistics__block-number {
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 96px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 18px;
+  }
 }

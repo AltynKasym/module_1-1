@@ -16,9 +16,14 @@ body {
   position: relative;
 }
 
+.non-scroll {
+  overflow-y: hidden;
+}
+
 .container {
-  max-width: 1167px;
+  max-width: 1207px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 li {
