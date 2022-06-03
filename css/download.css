@@ -3,15 +3,8 @@
   background-color: #fff;
 }
 .download__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .download__title {
@@ -33,4 +26,36 @@
   color: #666666;
   width: 50%;
   margin: 0 auto 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .download {
+    padding: 50px 0px;
+    background-color: #fff;
+  }
+
+  .download__subtitle {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    color: #222222;
+    margin: 0 auto 15px;
+  }
+  .download__text {
+    width: 70%;
+    margin: 0 auto 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .download {
+    padding: 50px 0px;
+    background-color: #fff;
+  }
+
+  .download__text {
+    width: 92%;
+    margin: 0 auto 25px;
+  }
 }

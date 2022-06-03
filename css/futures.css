@@ -97,13 +97,34 @@
 }
 
 @media screen and (max-width: 800px) {
+  .futures {
+    padding: 20px 0px;
+  }
   .futures__title {
     font-weight: 400;
     font-size: 27px;
     line-height: 36px;
     color: #ffffff;
-    width: 495px;
+    width: 80%;
     text-align: center;
     margin: 0 auto 45px;
+  }
+
+  .futures__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+  }
+  .futures__item {
+    position: relative;
+    background-color: #fff;
+    width: 300px;
+    /* min-height: 490px; */
+    height: 530px;
+    text-align: center;
+    border-radius: 20px;
+    /* margin-bottom: -120px; */
+    margin: 10px;
   }
 }

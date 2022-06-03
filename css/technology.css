@@ -40,11 +40,39 @@
 @media screen and (max-width: 1000px) {
   .technology__inner {
     display: flex;
-    padding: 100px 0;
+    padding: 20px 0;
     flex-direction: column;
   }
 
   .technology__media-image {
     width: 80%;
+  }
+  .technology__info {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .technology__info-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    color: #222222;
+    margin-bottom: 17px;
+    width: 100%;
+  }
+  .technology__info-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .technology__media {
+    text-align: center;
+    margin: 0;
+  }
+  .technology__media-image {
+    width: 250px;
   }
 }

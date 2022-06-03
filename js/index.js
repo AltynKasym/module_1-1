@@ -160,6 +160,7 @@ const showTestimonials = function () {
 
   testimonials.forEach((testimonial) => {
     const li = createCard("li", "testimonials__item");
+    const div = createCard("div");
     const h2 = createCard("h2", "testimonials__item-text", testimonial.text);
     const p = createCard("p", "testimonials__item-name", testimonial.name);
     const span = createCard(
@@ -167,8 +168,8 @@ const showTestimonials = function () {
       "testimonials__item-position",
       testimonial.job
     );
-
-    li.append(h2, p, span);
+    div.append(p, span);
+    li.append(h2, div);
     testimonialsList.append(li);
   });
 };
@@ -304,9 +305,18 @@ sendButton.addEventListener("click", (e) => {
 
 // Бургер меню
 
-const burgerMenu = document.querySelector(".header__burgermenu");
+const burgerMenu = document.querySelector(".header__burgermenu-open");
+const headerMenuItem = document.querySelectorAll(".header__menu-item");
 const menu = document.querySelector(".header__menu");
 
-burgerMenu.addEventListener('click',()=>{
-  menu.classList.toggle('header__menu-vision')
-})
+burgerMenu.addEventListener("click", () => {
+  menu.classList.toggle("header__menu-vision");
+  burgerMenu.classList.toggle("header__burgermenu-close");
+});
+
+headerMenuItem.forEach((item) => {
+  item.addEventListener("click", () => {
+    menu.classList.remove("header__menu-vision");
+    burgerMenu.classList.remove("header__burgermenu-close");
+  });
+});

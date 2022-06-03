@@ -28,13 +28,32 @@
   color: #ffffff;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .statistics__block-number {
-    font-weight: 400;
-    font-size: 55px;
+    font-size: 70px;
     line-height: 96px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .statistics {
+    padding: 40px 0;
+  }
+  .statistics__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .statistics__block {
+    width: 378px;
+    padding-bottom: 50px;
     text-align: center;
-    color: #ffffff;
-    margin-bottom: 18px;
+  }
+  .statistics__block-text {
+    font-weight: 400;
+    font-size: 14px;
   }
 }

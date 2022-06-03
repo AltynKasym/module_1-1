@@ -225,3 +225,25 @@
   margin-top: -10px;
   padding-left: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .modal__inner {
+    width: 350px;
+    padding: 30px 45px;
+    margin: 60px 0 70px;
+  }
+
+  .modal__button-item {
+    width: 250px;
+  }
+  .modal__checkbox-item::before {
+    content: "";
+    position: absolute;
+    left: 110px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #0278ed;
+    border-radius: 8px;
+  }
+}

@@ -40,12 +40,31 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .security {
+    /* display: flex; */
+    position: relative;
+    top: -207px;
+    margin-bottom: -280px;
+    background-color: #f2f2f2;
+  }
+  .security-title {
+    text-align: left;
+    color: #222222;
+  }
   .security__inner {
     display: flex;
-    padding: 100px 0;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    padding: 20px 0px;
+  }
+  .security__media {
+    margin: 0 auto;
   }
   .security__media-image {
-    width: 80%;
+    width: 250px;
+  }
+  .security__info {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
   }
 }

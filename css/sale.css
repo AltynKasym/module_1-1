@@ -68,6 +68,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .sale {
+    padding: 100px 0 78px;
+    margin-top: 70px;
+  }
   .sale__title {
     font-size: 50px;
     padding: 0 10px;
@@ -101,7 +105,18 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
+  .sale {
+    padding: 120px 0 78px;
+    margin-top: 46px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .sale {
+    padding: 120px 0 78px;
+    margin-top: 50px;
+  }
   .sale__title {
     font-weight: 700;
     font-size: 42px;
@@ -138,13 +153,19 @@
   }
 }
 
-@media screen and (max-width: 550px) {
-  .sale__title {
-    /* font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
-    padding: 0 58px; */
+@media screen and (max-width: 665px) {
+  .sale {
+    padding: 120px 0 78px;
+    margin-top: 35px;
   }
+}
+
+@media screen and (max-width: 550px) {
+  .sale {
+    padding: 120px 0 78px;
+    margin-top: 15px;
+  }
+
   .sale__paragraph {
     font-size: 22px;
     color: #ffffff;
@@ -155,21 +176,21 @@
   }
 
   .sale__timer-item + .sale__timer-item {
-    margin-left: 10px;
+    margin-left: 8px;
   }
 
   .sale__timer-number {
-    font-size: 44px;
+    font-size: 40px;
     margin-bottom: -50px;
   }
   .sale__timer-text {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .sale__timer-item:nth-child(-n + 3)::after {
     content: "|";
-    font-size: 44px;
-    top: 42px;
-    left: 80px;
+    font-size: 40px;
+    top: 45px;
+    left: 75px;
   }
 }
