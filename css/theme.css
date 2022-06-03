@@ -127,4 +127,9 @@
     width: 100%;
     margin: 0 auto 36px;
   }
+  .light {
+    background-color: #ffffff;
+    color: #222222;
+    transition: 0.2s;
+  }
 }
