@@ -1,5 +1,5 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   margin-bottom: -89px;
   background: #ffffff;

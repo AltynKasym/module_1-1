@@ -16,27 +16,29 @@
       <div class="container">
         <span class="header__inner">
           <img class="header__logo" src="./img/header-logo.svg" alt="logo" />
-          <nav class="header__menu">
-            <ul class="header__menu-list">
-              <li class="header__menu-item">
-                <a href="#features">Features</a>
-              </li>
-              <li class="header__menu-item"><a href="#pricing">Pricing</a></li>
-              <li class="header__menu-item">
-                <a href="#testimonials">Testimonials</a>
-              </li>
-              <li class="header__menu-item"><a href="#faq">FAQ</a></li>
-            </ul>
-
-            <button class="header__button">
-              <a href="#" target="_blank" class="download__button"
-                >Get this app</a
-              >
-            </button>
-          </nav>
+          <nav>
+            <div class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="#features">Features</a>
+                </li>
+                <li class="header__menu-item"><a href="#pricing">Pricing</a></li>
+                <li class="header__menu-item">
+                  <a href="#testimonials">Testimonials</a>
+                </li>
+                <li class="header__menu-item"><a href="#faq">FAQ</a></li>
+              </ul>
+  
+              <button class="header__button">
+                <a href="#" target="_blank" class="download__button"
+                  >Get this app</a
+                >
+              </button>
+            </div>
           <span
                        class="header__burgermenu-open"
-          ></span>
+          ></span></nav>
+          
         </div>
       </div>
     </header>
@@ -199,6 +201,10 @@
                 >
               </div>
               <button class="modal_sendButton">send</button>
+              <div class="modal__send">
+                <img src="./img/time.svg" alt="time" class="modal__send-time">
+                <p class="modal__send-text">loading...</p>
+              </div>
             </form>
           </div>
         </div>

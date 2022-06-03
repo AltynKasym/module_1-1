@@ -11,6 +11,10 @@
   overflow-y: auto;
 }
 
+.modal-visible {
+  display: block;
+}
+
 .modal__inner {
   width: 506px;
   position: relative;
@@ -64,8 +68,6 @@
 }
 
 .modal__input-error {
-  /* opacity: 0; */
-  /* display: none; */
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -79,7 +81,6 @@
   padding: 9px 17px;
   background: #f2f2f2;
   border-radius: 4px;
-  /* margin-bottom: 17px; */
   border: none;
   width: 100%;
 }
@@ -224,6 +225,30 @@
   position: absolute;
   margin-top: -10px;
   padding-left: 10px;
+}
+
+.modal__send {
+  display: none;
+}
+.modal__send-vis {
+  display: flex;
+  margin-top: 30px;
+}
+
+@keyframes moving {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal__send-time {
+  animation: moving 1s infinite linear;
+}
+
+.modal__send-text {
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: #7e7e7e;
 }
 
 @media screen and (max-width: 600px) {

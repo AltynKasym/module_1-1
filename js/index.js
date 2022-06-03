@@ -1,3 +1,5 @@
+// Загрузка данных
+
 window.addEventListener("load", loadDatabase);
 
 const testimonials = [],
@@ -31,6 +33,24 @@ function loadDatabase() {
       changePlan();
     });
 }
+
+// Бургер меню
+
+const burgerMenu = document.querySelector(".header__burgermenu-open");
+const headerMenuItem = document.querySelectorAll(".header__menu-item");
+const menu = document.querySelector(".header__menu");
+
+burgerMenu.addEventListener("click", () => {
+  menu.classList.toggle("header__menu-vision");
+  burgerMenu.classList.toggle("header__burgermenu-close");
+});
+
+headerMenuItem.forEach((item) => {
+  item.addEventListener("click", () => {
+    menu.classList.remove("header__menu-vision");
+    burgerMenu.classList.remove("header__burgermenu-close");
+  });
+});
 
 // Ссылки для загрузки приложения
 
@@ -140,7 +160,7 @@ const showPlans = function () {
     const body = document.querySelector("body");
 
     button.addEventListener("click", () => {
-      modal.style.display = "block";
+      modal.classList.add("modal-visible");
       body.classList.add("non-scroll");
 
       if (button.dataset.price == buttonPrice[ind].id) {
@@ -186,34 +206,7 @@ const changePlan = function () {
     priceName[ind].setAttribute("for", plan.name);
     buttonPrice[ind].setAttribute("id", plan.name);
   });
-
-  buttonBuy.forEach((button, ind) => {
-    button.onclick = () => {
-      if (button.dataset.price == buttonPrice[ind].id) {
-        buttonPrice[ind].checked = true;
-      }
-    };
-  });
 };
-
-// Открытие модального окна
-
-const bannerButton = document.querySelectorAll(".button-buy");
-const closeButton = document.querySelector(".modal__closeButton");
-const modal = document.querySelector(".modal");
-const body = document.querySelector("body");
-
-bannerButton.forEach((button) => {
-  button.addEventListener("click", () => {
-    modal.style.display = "block";
-    body.classList.add("non-scroll");
-  });
-});
-
-closeButton.addEventListener("click", () => {
-  modal.style.display = "none";
-  body.classList.remove("non-scroll");
-});
 
 // Изменение темы
 
@@ -243,18 +236,33 @@ function changeTheme(e) {
   }
 }
 
-// Send data
+// Открытие модального окна
+
+const bannerButton = document.querySelectorAll(".button-buy");
+const closeButton = document.querySelector(".modal__closeButton");
+const modal = document.querySelector(".modal");
+const body = document.querySelector("body");
+
+bannerButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    modal.classList.add("modal-visible");
+    body.classList.add("non-scroll");
+  });
+});
+
+closeButton.addEventListener("click", () => {
+  modal.classList.remove("modal-visible");
+  body.classList.remove("non-scroll");
+
+  inputs[0].value = "";
+  inputs[1].value = "";
+});
+
+// Валидация формы
 
 const sendButton = document.querySelector(".modal_sendButton");
 const inputs = document.querySelectorAll(".modal__input-item");
-const checkbox = document.querySelectorAll(".modal__checkbox-check");
-const checkboxItem = document.querySelectorAll(".modal__checkbox-item");
 const error = document.querySelectorAll(".modal__input-error");
-
-const emailReg = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
-console.log(checkbox);
-
-// Валидация формы
 
 let valid = [false, false, false];
 
@@ -275,48 +283,51 @@ inputs.forEach((input, ind) => {
       input.style.background = "#e5f4ff";
       valid[ind] = true;
     }
-
-    // else if (emailReg.test(inputs[1].value) !== true) {
-    //   error[1].classList.add("show-errorZero");
-    // }
   };
 });
 
-checkboxItem.forEach((check, ind) => {
-  check.addEventListener("click", () => {
-    check.toggleAttribute("checked");
-    valid[2] = true;
-    console.log(check.innerText);
-    buttonPrice[ind].checked;
-  });
+const checkbox = document.querySelectorAll(".modal__checkbox-check");
+const checkboxItem = document.querySelectorAll(".modal__checkbox-item");
+const modalButtons = document.querySelectorAll(".modal__button-input");
+
+modalButtons.forEach((button, id) => {
+  if (button.checked) console.log(button);
 });
 
-if (valid[0] && valid[1]) {
-  sendButton.setAttribute("disabled", false);
-} else sendButton.setAttribute("disabled", true);
+// Send data
 
-sendButton.addEventListener("click", (e) => {
+sendButton.addEventListener("click", sendData);
+
+const modalSend = document.querySelector(".modal__send");
+
+function sendData(e) {
   e.preventDefault();
 
   if (valid[0] && valid[1]) {
     console.log(inputs[0].value, inputs[1].value);
+    setInterval(modalSend.classList.add("modal__send-vis"), 1000);
+    setTimeout(() => {
+      modalSend.classList.remove("modal__send-vis");
+      modal.classList.remove("modal-visible");
+      body.classList.remove("non-scroll");
+    }, 2000);
   }
-});
 
-// Бургер меню
-
-const burgerMenu = document.querySelector(".header__burgermenu-open");
-const headerMenuItem = document.querySelectorAll(".header__menu-item");
-const menu = document.querySelector(".header__menu");
-
-burgerMenu.addEventListener("click", () => {
-  menu.classList.toggle("header__menu-vision");
-  burgerMenu.classList.toggle("header__burgermenu-close");
-});
-
-headerMenuItem.forEach((item) => {
-  item.addEventListener("click", () => {
-    menu.classList.remove("header__menu-vision");
-    burgerMenu.classList.remove("header__burgermenu-close");
+  inputs.forEach((input, ind) => {
+    if (input.value.trim().length < 1) {
+      input.style.background = "#FFEEEE";
+      error[ind].classList.add("show-errorZero");
+      error[ind].classList.remove("show-errorThree");
+      valid[ind] = false;
+    } else if (input.value.trim().length < 3) {
+      input.style.background = "#FFEEEE";
+      error[ind].classList.add("show-errorThree");
+      valid[ind] = false;
+    } else {
+      error[ind].classList.remove("show-errorZero");
+      error[ind].classList.remove("show-errorThree");
+      input.style.background = "#e5f4ff";
+      valid[ind] = true;
+    }
   });
-});
+}
